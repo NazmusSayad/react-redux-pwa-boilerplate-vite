@@ -33,7 +33,7 @@ const css = {
   },
 }
 
-isDevMode &&
+isDevMode ||
   plugins.push(
     VitePWA({
       manifest: false,
