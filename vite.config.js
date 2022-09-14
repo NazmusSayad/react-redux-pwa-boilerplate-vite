@@ -1,4 +1,3 @@
-console.clear()
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -9,7 +8,10 @@ const config = {
   assestPath: 'assets',
 }
 
-const server = { port: 80 }
+const server = {
+  port: 80,
+}
+
 const build = {
   rollupOptions: {
     output: {
@@ -25,6 +27,7 @@ const build = {
 }
 
 const plugins = [react(), svgr.default()]
+
 const css = {
   modules: {
     generateScopedName: isDevMode
@@ -39,6 +42,7 @@ isDevMode ||
       manifest: false,
       workbox: {
         globPatterns: ['**'],
+        maximumFileSizeToCacheInBytes: 2_000_000,
       },
     })
   )
