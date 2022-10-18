@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "intelli-path": "node ./intellipath.js"
   },
   "dependencies": {
     "@honkhonk/vite-plugin-svgr": "latest",

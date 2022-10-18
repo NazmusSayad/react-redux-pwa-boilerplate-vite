@@ -1,4 +1,4 @@
-import path from "path"
+import path from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import svgr from '@honkhonk/vite-plugin-svgr'
@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 const isDevMode = process.env.NODE_ENV !== 'production'
 const config = {
   static: 'static',
-  assets: 'assets'
+  assets: 'assets',
 }
 
 const server = {
@@ -19,7 +19,8 @@ const build = {
     output: {
       assetFileNames: file => {
         const ext = file.name.split('.').at(-1)
-        const outputFolder = ext === 'css' || ext === 'js' ? '' : config.assets + '/'
+        const outputFolder =
+          ext === 'css' || ext === 'js' ? '' : config.assets + '/'
         return `${config.static}/${outputFolder}[name]-[hash][extname]`
       },
       entryFileNames: `${config.static}/[name]-[hash].js`,
@@ -30,15 +31,15 @@ const build = {
 
 const resolve = {
   alias: {
-      '@src': path.resolve('./src'),
-      '@hooks': path.resolve('./src/hooks'),
-      '@store': path.resolve('./src/store'),
-      '@slice': path.resolve('./src/store/slice'),
-      '@assets': path.resolve('./src/assets'),
-      '@components': path.resolve('./src/components'),
-      '@layouts': path.resolve('./src/layouts'),
-      '@pages': path.resolve('./src/pages'),
-      '@abstracts': path.resolve('./src/styles/abstracts'),
+    '$src': path.resolve('./src'),
+    '$hooks': path.resolve('./src/hooks'),
+    '$store': path.resolve('./src/store'),
+    '$slice': path.resolve('./src/store/slice'),
+    '$assets': path.resolve('./src/assets'),
+    '$components': path.resolve('./src/components'),
+    '$layouts': path.resolve('./src/layouts'),
+    '$pages': path.resolve('./src/pages'),
+    '$abstracts': path.resolve('./src/styles/abstracts'),
   },
 }
 
@@ -63,4 +64,4 @@ isDevMode ||
     })
   )
 
-export default defineConfig({resolve,plugins, css ,   server, build, })
+export default defineConfig({ resolve, plugins, css, server, build })
