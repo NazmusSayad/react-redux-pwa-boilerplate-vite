@@ -1,11 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
 import svgr from '@honkhonk/vite-plugin-svgr'
-const isDevMode = process.env.NODE_ENV === 'development'
+import { VitePWA } from 'vite-plugin-pwa'
+const isDevMode = process.env.NODE_ENV !== 'production'
 
 const config = {
-  assestPath: 'assets',
+  static: 'static',
+  assets: 'assets'
 }
 
 const server = {
@@ -17,11 +18,11 @@ const build = {
     output: {
       assetFileNames: file => {
         const ext = file.name.split('.').at(-1)
-        const outputFolder = ext === 'css' || ext === 'js' ? '' : 'files/'
-        return `${config.assestPath}/${outputFolder}[name]-[hash][extname]`
+        const outputFolder = ext === 'css' || ext === 'js' ? '' : config.assets + '/'
+        return `${config.static}/${outputFolder}[name]-[hash][extname]`
       },
-      chunkFileNames: `${config.assestPath}/chunk-[name]-[hash].js`,
-      entryFileNames: `${config.assestPath}/[name]-[hash].js`,
+      entryFileNames: `${config.static}/[name]-[hash].js`,
+      chunkFileNames: `${config.static}/chunk-[name]-[hash].js`,
     },
   },
 }
