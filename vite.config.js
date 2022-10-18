@@ -63,4 +63,4 @@ isDevMode ||
     })
   )
 
-export default defineConfig({ server, build, plugins, css })
+export default defineConfig({resolve,plugins, css ,   server, build, })
