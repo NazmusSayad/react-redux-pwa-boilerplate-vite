@@ -58,8 +58,14 @@ isDevMode ||
     VitePWA({
       manifest: false,
       workbox: {
-        globPatterns: ['**'],
-        maximumFileSizeToCacheInBytes: 2_000_000,
+        globPatterns: ['/'],
+        runtimeCaching: [
+          {
+            handler: 'CacheFirst',
+            urlPattern: ({ sameOrigin }) => sameOrigin,
+            options: { cacheName: 'static-files' },
+          },
+        ],
       },
     })
   )
