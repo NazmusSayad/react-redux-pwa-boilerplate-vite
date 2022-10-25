@@ -5,11 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "intelli-path": "node ./intellipath.js"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@honkhonk/vite-plugin-svgr": "latest",
     "@reduxjs/toolkit": "latest",
     "react": "latest",
     "react-dom": "latest",
@@ -23,6 +21,7 @@
     "postcss-preset-env": "latest",
     "sass": "latest",
     "vite": "latest",
+    "@honkhonk/vite-plugin-svgr": "latest",
     "vite-pwa": "latest"
   },
   "engines": {
