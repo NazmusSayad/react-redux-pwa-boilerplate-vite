@@ -1,6 +1,11 @@
 @use './reset';
-@use './keyframes';
 @use './fonts';
-@use './app';
-@use './typography';
+
+@use './keyframes';
+@use './colors';
+
 @use './utils';
+@use './typography';
+
+@use './app';
+@use './components';

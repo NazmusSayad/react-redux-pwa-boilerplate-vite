@@ -23,7 +23,7 @@
     "postcss-preset-env": "latest",
     "sass": "latest",
     "vite": "latest",
-    "vite-plugin-pwa": "latest"
+    "vite-pwa": "latest"
   },
   "engines": {
     "node": ">=16.0.0"
