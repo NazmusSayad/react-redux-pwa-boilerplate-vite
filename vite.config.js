@@ -30,7 +30,8 @@ const css = {
 
 const resolve = {
   alias: {
-    $src: srcDir,
+    '$src': srcDir,
+    '$slice': path.join(srcDir, '/store/slice'),
     ...Object.fromEntries(
       fs
         .readdirSync(srcDir)

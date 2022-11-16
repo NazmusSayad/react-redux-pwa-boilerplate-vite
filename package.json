@@ -9,19 +9,20 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "latest",
+    "classnames": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-redux": "latest",
     "react-router-dom": "latest"
   },
   "devDependencies": {
+    "@honkhonk/vite-plugin-svgr": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@vitejs/plugin-react": "latest",
     "postcss-preset-env": "latest",
     "sass": "latest",
     "vite": "latest",
-    "@honkhonk/vite-plugin-svgr": "latest",
     "vite-pwa": "latest"
   },
   "engines": {

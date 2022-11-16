@@ -1,11 +1,7 @@
 import InitialApp from './_InitialApp/InitialApp'
 
 const App = () => {
-  return (
-    <main>
-      <InitialApp />
-    </main>
-  )
+  return <InitialApp />
 }
 
 export default App
