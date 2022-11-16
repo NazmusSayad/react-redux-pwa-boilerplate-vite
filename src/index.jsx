@@ -15,7 +15,7 @@ const root = createRoot(rootElement)
 
 root.render(
   <Provider store={store}>
-    <ErrorBoundary>
+    <ErrorBoundary element={<h1>Error</h1>}>
       <React.StrictMode>
         <App />
       </React.StrictMode>
