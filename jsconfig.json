@@ -1,0 +1,50 @@
+{
+	"compilerOptions": {
+		"module": "es6",
+		"baseUrl": "./",
+		"paths": {
+			"$src/*": [
+				"./src/*"
+			],
+			"$slice/*": [
+				"./src/store/slice/*"
+			],
+			"$_InitialApp/*": [
+				"./src/_InitialApp/*"
+			],
+			"$api/*": [
+				"./src/api/*"
+			],
+			"$assets/*": [
+				"./src/assets/*"
+			],
+			"$components/*": [
+				"./src/components/*"
+			],
+			"$config/*": [
+				"./src/config/*"
+			],
+			"$data/*": [
+				"./src/data/*"
+			],
+			"$hooks/*": [
+				"./src/hooks/*"
+			],
+			"$layouts/*": [
+				"./src/layouts/*"
+			],
+			"$pages/*": [
+				"./src/pages/*"
+			],
+			"$store/*": [
+				"./src/store/*"
+			],
+			"$styles/*": [
+				"./src/styles/*"
+			],
+			"$utils/*": [
+				"./src/utils/*"
+			]
+		}
+	}
+}

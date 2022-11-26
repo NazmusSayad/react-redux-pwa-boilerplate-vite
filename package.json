@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite --host",
+    "build": "vite build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "latest",
@@ -13,7 +12,8 @@
     "react": "latest",
     "react-dom": "latest",
     "react-redux": "latest",
-    "react-router-dom": "latest"
+    "react-router-dom": "latest",
+    "vite-vscode": "latest"
   },
   "devDependencies": {
     "@honkhonk/vite-plugin-svgr": "latest",
@@ -26,7 +26,7 @@
     "vite-pwa": "latest"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": "*"
   },
   "browserslist": {
     "development": [

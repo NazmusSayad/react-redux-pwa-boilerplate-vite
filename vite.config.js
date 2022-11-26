@@ -2,9 +2,9 @@ import fs from 'fs'
 import path from 'path'
 import { defineConfig } from 'vite'
 import vitePWA from 'vite-pwa'
+import viteVSCode from 'vite-vscode'
 import react from '@vitejs/plugin-react'
 import svgr from '@honkhonk/vite-plugin-svgr'
-import intelliPath from './intellipath.js'
 
 const isDevMode = process.env.NODE_ENV !== 'production'
 const srcDir = path.resolve('./src')
@@ -13,7 +13,7 @@ const config = {
   assets: 'assets',
 }
 
-const plugins = [react(), svgr.default(), vitePWA()]
+const plugins = [react(), svgr.default(), vitePWA(), viteVSCode()]
 
 const css = {
   modules: {
@@ -30,8 +30,8 @@ const css = {
 
 const resolve = {
   alias: {
-    '$src': srcDir,
-    '$slice': path.join(srcDir, '/store/slice'),
+    $src: srcDir,
+    $slice: path.join(srcDir, '/store/slice'),
     ...Object.fromEntries(
       fs
         .readdirSync(srcDir)
@@ -61,5 +61,4 @@ const build = {
   },
 }
 
-intelliPath(resolve.alias)
 export default defineConfig({ plugins, css, resolve, server, build })
