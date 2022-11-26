@@ -1537,7 +1537,7 @@ vite-pwa@latest:
   resolved "https://registry.yarnpkg.com/vite-pwa/-/vite-pwa-0.0.6.tgz#870c9b8fc32968a186d5011566f358698c8dbbbc"
   integrity sha512-mDhQLLmskFX9NW+IGriTJTjmKJv7ZJRSxg5QNiFB4B2Pf9rxYgBqvrhAevjQLjQ+qJJjXDGSfuCrUw49S4/0mQ==
 
-vite-vscode@^0.0.3:
+vite-vscode@latest:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/vite-vscode/-/vite-vscode-0.0.3.tgz#1ebdff840c1675e31c1428eee294b0d35f30f471"
   integrity sha512-pDEVWYLzV5/POB14I+yM8/dbjL3XVPAg2K6YQtwushQZF8IjafzlvpTC0g+2vGjJiu98wsvoROnUUXi8yP5waQ==

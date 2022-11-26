@@ -1,6 +1,6 @@
-import react from 'react'
+import React from 'react'
 
-class ErrorBoundary extends react.Component {
+class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
     this.state = { error: null, errorInfo: null }
@@ -16,7 +16,7 @@ class ErrorBoundary extends react.Component {
   render() {
     const { children, element } = this.props
 
-    if (!react.isValidElement(element)) {
+    if (!React.isValidElement(element)) {
       throw new Error("Please fill 'element' prop with a valid component.")
     }
 
