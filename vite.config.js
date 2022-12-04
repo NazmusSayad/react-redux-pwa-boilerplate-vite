@@ -30,7 +30,6 @@ const css = {
 
 const resolve = {
   alias: {
-    $src: srcDir,
     $slice: path.join(srcDir, '/store/slice'),
     ...Object.fromEntries(
       fs
@@ -38,6 +37,7 @@ const resolve = {
         .filter((t) => fs.lstatSync(path.join(srcDir, t)).isDirectory())
         .map((t) => [`$${t}`, path.join(srcDir, t)])
     ),
+    $src: srcDir,
   },
 }
 
