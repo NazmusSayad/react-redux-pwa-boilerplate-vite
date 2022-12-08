@@ -1,4 +1,4 @@
-import InitialApp from './_InitialApp/InitialApp'
+import InitialApp from '$_InitialApp/InitialApp'
 
 const App = () => {
   return <InitialApp />

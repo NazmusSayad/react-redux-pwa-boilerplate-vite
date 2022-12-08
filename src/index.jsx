@@ -7,7 +7,8 @@ import ErrorBoundary from './ErrorBoundary'
 import className from 'classnames'
 window.cn = className
 
-import './styles/index.scss'
+import 'css-reset-plus'
+import '$styles/index.scss'
 import App from './App'
 
 const rootElement = document.getElementById('Root')
